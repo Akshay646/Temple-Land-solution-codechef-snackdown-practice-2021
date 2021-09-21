@@ -1,0 +1,32 @@
+//@Akshay Yadav
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+	int t;
+	cin >> t;
+	while(t--){
+	    int n;
+	    cin >> n;
+	    int ar[n];
+	    for(int i = 0; i < n; i++){
+	        cin >> ar[i];
+	    }
+	    int mid = n / 2, checkDiff = 0;
+	    for(int i = 0; i < n; i++){
+	        checkDiff+=ar[i];
+	    }
+	    
+	    if(n % 2 != 0 && ar[mid] == sqrt(checkDiff) && ar[0] && ar[n - 1]){
+	        cout << "yes" << "\n";
+	    }
+	    else{
+	        cout << "no" << "\n";
+	    }
+	}
+	return 0;
+}
